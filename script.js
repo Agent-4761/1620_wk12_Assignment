@@ -63,11 +63,16 @@ function renderIndex(contactList) {
 
 // Fourth JavaScript function
 
-function cleanUpView() {
-    var contant_cleaner = document.getElementsByClassName("contactinfo");
-    for(var i = contant_cleaner.length - 1; 0 <= i; i--)
-    if(contant_cleaner[i] && contant_cleaner[i].parentElement)
-    contant_cleaner[i].parentElement.removeChild(contant_cleaner[i]);
+function createSingleIndex() {
+    const contactList = []
+
+    const element1 = document.querySelector('div');
+
+    element1.innerHTML =
+        '<a href="page3.html"><div class="contact"><p>' + indexList[0] + '</p></div></a>' 
+       
+    
+
 }
 
 
@@ -113,6 +118,7 @@ function cleanUpCreate() {
 function renderCreate() {
 
     const element1 = document.querySelector('div');
+    const element1 = document.addEventListener('cancel');
 
     element1.innerHTML =
     '<div class="contactedit">' +
