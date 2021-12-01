@@ -38,18 +38,9 @@ function cleanUpIndex() {
 
 // Second JavaScript function
 
-function createSingleIndex() {
-    const indexList = [  
-        "Barry Allen",
-        "Beverly Crusher",
-        "Diana Prince"  
-    ]
-    const element1 = document.querySelector('div');
+function addEventListener(contactList) {
 
-    element1.innerHTML =
-        '<a href="page3.html"><div class="contact"><p>' + indexList[0] + '</p></div></a>' 
-       
-    
+document.addEventListener("click",contactList );
 
 }
 
@@ -161,3 +152,9 @@ function renderCreate() {
     document.body.appendChild(element1);
 
 }
+
+// 10th requirement for A2P2
+document.addEventListener("DOMContentLoaded", function() {
+    cleanUpIndex()
+    renderIndex(contactList)
+});
